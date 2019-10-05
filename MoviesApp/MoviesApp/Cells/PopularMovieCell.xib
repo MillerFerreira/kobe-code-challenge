@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopularMovieCell" id="gTV-IL-0wX" customClass="PopularMovieCell" customModule="MoviesApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="190" height="358"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="190" height="358"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jFF-dX-U5P" userLabel="RootView">
+                        <rect key="frame" x="5" y="24" width="180" height="320"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gSa-0I-vVJ" userLabel="Poster">
+                                <rect key="frame" x="10" y="8" width="160" height="240"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="EfE-sP-dGp"/>
+                                    <constraint firstAttribute="height" constant="240" id="UMe-46-Lu9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVj-i3-RTJ">
+                                <rect key="frame" x="5" y="252" width="170" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favorite_gray_icon" translatesAutoresizingMaskIntoConstraints="NO" id="45z-sj-zvm" userLabel="FavoriteIcon">
+                                <rect key="frame" x="80" y="294" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Gbb-MX-UQF"/>
+                                    <constraint firstAttribute="width" constant="20" id="q7d-ZT-NSp"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49952495909317179" green="0.66666668653488159" blue="0.63302400108000079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="320" id="56A-su-M5y"/>
+                            <constraint firstItem="gSa-0I-vVJ" firstAttribute="top" secondItem="jFF-dX-U5P" secondAttribute="top" constant="8" id="Gpk-ff-a0I"/>
+                            <constraint firstItem="oVj-i3-RTJ" firstAttribute="leading" secondItem="jFF-dX-U5P" secondAttribute="leading" constant="5" id="KIt-mB-2IB"/>
+                            <constraint firstItem="gSa-0I-vVJ" firstAttribute="centerX" secondItem="jFF-dX-U5P" secondAttribute="centerX" id="MiL-ZN-Bgm"/>
+                            <constraint firstAttribute="bottom" secondItem="45z-sj-zvm" secondAttribute="bottom" constant="6" id="Nq3-TT-3wm"/>
+                            <constraint firstAttribute="width" constant="180" id="QiU-qL-XS6"/>
+                            <constraint firstItem="oVj-i3-RTJ" firstAttribute="top" secondItem="gSa-0I-vVJ" secondAttribute="bottom" constant="4" id="RbV-JY-Yyh"/>
+                            <constraint firstItem="45z-sj-zvm" firstAttribute="centerX" secondItem="jFF-dX-U5P" secondAttribute="centerX" id="eUe-jq-YqL"/>
+                            <constraint firstAttribute="trailing" secondItem="oVj-i3-RTJ" secondAttribute="trailing" constant="5" id="fcZ-V4-RKQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="jFF-dX-U5P" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="Qbv-qR-oPI"/>
+                <constraint firstItem="jFF-dX-U5P" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="iLA-zo-LBT"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="190" height="358"/>
+            <connections>
+                <outlet property="favoriteIcon" destination="45z-sj-zvm" id="bJo-ka-TfU"/>
+                <outlet property="posterImageView" destination="gSa-0I-vVJ" id="qQC-g5-McL"/>
+                <outlet property="titleLabelView" destination="oVj-i3-RTJ" id="XVK-K3-vwB"/>
+            </connections>
+            <point key="canvasLocation" x="189.85507246376812" y="210.9375"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="favorite_gray_icon" width="17" height="16"/>
+    </resources>
+</document>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoviesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="movie-db-image-logo" translatesAutoresizingMaskIntoConstraints="NO" id="6ID-45-grA" userLabel="logo">
+                                <rect key="frame" x="77" y="323" width="260" height="260"/>
+                                <accessibility key="accessibilityConfiguration" hint="The Image Logo of THE MOVIE DB" label="The Movie DB LOGO">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="260" id="OBU-dj-hOo"/>
+                                    <constraint firstAttribute="width" constant="260" id="oU3-e5-KB0"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App For Search Movies" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mD-x5-g5d" userLabel="labelView">
+                                <rect key="frame" x="61.5" y="608" width="291.5" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
+                                <color key="textColor" red="0.0" green="0.74901960784313726" blue="0.38039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0078431372549019607" green="0.10588235294117647" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="4mD-x5-g5d" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="K9z-HR-dX7"/>
+                            <constraint firstItem="6ID-45-grA" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bgH-O8-7c3"/>
+                            <constraint firstItem="6ID-45-grA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oTM-9m-JcU"/>
+                            <constraint firstItem="4mD-x5-g5d" firstAttribute="top" secondItem="6ID-45-grA" secondAttribute="bottom" constant="25" id="vYm-UG-mzM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageLogo" destination="6ID-45-grA" id="vLj-Mz-6vs"/>
+                        <outlet property="textLabel" destination="4mD-x5-g5d" id="Kjw-Sk-rnO"/>
+                        <segue destination="DJs-tV-Fvj" kind="presentation" identifier="TabsViewController" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="2em-8J-1VZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Tabs-->
+        <scene sceneID="1Hd-mC-IjT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Tabs" id="DJs-tV-Fvj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MxL-HC-OMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="movie-db-image-logo" width="83.666664123535156" height="74.333335876464844"/>
+    </resources>
+</document>
